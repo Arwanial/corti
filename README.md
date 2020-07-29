@@ -1,5 +1,5 @@
 # corti
-Expert Advisor for MT4 which trades correlated pairs .
+Expert Advisor for MetaTrader 4 which trades correlated pairs .
 
 - selection of direction of correlated pairs to trade
 - one input field for global usd per pip value for pair
