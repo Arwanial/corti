@@ -19,5 +19,5 @@ It can trade up to 3 groups of pairs.
 - Waits cooling time
 - Open trades of Group 3 - closes in profit
 - Waits cooling time
-- REVERSES TRADES DIRECTION OF Group 1,,,,,Group 2.....Group 3....and so on.
+- <b>REVERSES TRADES DIRECTION OF Group 1,,,,,Group 2.....Group 3....and so on.</b>
 
