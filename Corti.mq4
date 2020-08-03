@@ -8,22 +8,22 @@
 #property version   "1.2"
 #property strict
 sinput string g1="[---]";//Group 1 :
-input string M_Buys_A="XAUUSD";//[1]Buy Pairs :
-input string M_Sells_A="EURUSD,EURUSD";//[1]Sell Pairs :
+input string M_Buys_A="GBPUSD,GBPJPY";//[1]Buy Pairs :
+input string M_Sells_A="USDJPY,USDJPY";//[1]Sell Pairs :
 sinput string g2="[---]";//Group 2 :
-input string M_Buys_B="EURUSD,EURGBP,GBPUSD";//[2]Buy Pairs :
-input string M_Sells_B="";//[2]Sell Pairs :
+input string M_Buys_B="";//[2]Buy Pairs :
+input string M_Sells_B="EURUSD,EURGBP,GBPUSD,GBPUSD";//[2]Sell Pairs :
 sinput string g3="[---]";//Group 3 :
 input string M_Buys_C="";//[3]Buy Pairs :
-input string M_Sells_C="CADCHF,CADJPY,CHFJPY";//[3]Sell Pairs :
+input string M_Sells_C="";//[3]Sell Pairs :
 int M_Magic=1;//Magic Number
 input double M_TP=5;//Equity (of ea) take profit
-input double M_Common_Cost_Per_Point=0.01;//Common Cost Per Point
+input double M_Common_Cost_Per_Point=0.02;//Common Cost Per Point
  int M_Attempts=10;//Open Trade Attempts 
  uint M_Timeout=300;//Ms Timeout for Opening (milliseconds for attempts)
-input string M_Comment="@axidentaltrader";//Comment
+input string M_Comment="@macrofed";//Comment
  int M_Slippage=100;//Slippage in points
-input int M_Restart_Minutes=120;//Minutes to restart  
+input int M_Restart_Minutes=360;//Minutes to restart  
  bool M_Add_Commision=true;//Added commision 
  bool M_Add_Swaps=true;//Added swap
  bool Cycle=true;//Cycle With Profit ? 
@@ -42,7 +42,7 @@ input int MondayHour=10;//Monday Hour to begin :
 //| Expert initialization function                                   |
 //+------------------------------------------------------------------+
 bool has_timer=false;
-string system_folder="MarcelMultiEA",system_objects="MMEA_";
+string system_folder="MMEA",system_objects="MMEA_";
 struct cycle_texts
 {
 string sells,buys;
