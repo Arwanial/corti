@@ -21,3 +21,4 @@ It can trade up to 3 groups of pairs.
 - Waits cooling time
 - <b>REVERSES TRADES DIRECTION OF Group 1,,,,,Group 2.....Group 3....and so on.</b>
 
+ForexFactory thread for discussions and tests : https://www.forexfactory.com/thread/post/13103685#post13103685
