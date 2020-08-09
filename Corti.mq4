@@ -96,12 +96,12 @@ void Save(string folder,int magic)
      }
 };
 m_restart M;
-bool MarselTimeAllow=false;
+bool MTAllow=false;
 double system_profit=0,system_drawdown=0,system_drawup=0,max_drawdown=0,max_drawup=0;
 int OnInit()
   {
 //--- create timer
-  MarselTimeAllow=false;
+  MTAllow=false;
   has_timer=EventSetTimer(10);
   //load 
     M.Load(system_folder,M_Magic);
@@ -143,9 +143,9 @@ int OnInit()
     //prepare cycles ends here 
     if(TicketsTotal==0&&!M.armed)
       {
-      MarselTimeAllow=CheckMarselTimeAllow();
-      if(IsTradeAllowed()&&IsConnected()&&MarselTimeAllow) SplitAndTrade();
-      if(!IsTradeAllowed()||!IsConnected()||!MarselTimeAllow)
+      MTAllow=CheckMTAllow();
+      if(IsTradeAllowed()&&IsConnected()&&MTAllow) SplitAndTrade();
+      if(!IsTradeAllowed()||!IsConnected()||!MTAllow)
         {
         FindNextInterval(M_Restart_Minutes);//retry after 5
         }
@@ -241,9 +241,9 @@ void OnTimer()
     {
     if(TicketsTotal==0)
       {
-      MarselTimeAllow=CheckMarselTimeAllow();
-      if(IsTradeAllowed()&&IsConnected()&&MarselTimeAllow) SplitAndTrade();
-      if(!IsTradeAllowed()||!IsConnected()||!MarselTimeAllow)
+      MTAllow=CheckMTAllow();
+      if(IsTradeAllowed()&&IsConnected()&&MTAllow) SplitAndTrade();
+      if(!IsTradeAllowed()||!IsConnected()||!MTAllow)
         {
         FindNextInterval(M_Restart_Minutes);//retry after 5
         }
@@ -580,7 +580,7 @@ returnio=(int)digitos;
 return(returnio);
 }
 
-bool CheckMarselTimeAllow()
+bool CheckMTAllow()
 {
 bool result=true;
 //time used is broker time 
