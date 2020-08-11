@@ -3,8 +3,8 @@
 //|                        Copyright 2020, MetaQuotes Software Corp. |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
-#property copyright "Copyright @macrofed"
-#property link      "https://twitter.com/macrofed"
+#property copyright "Buy me a coffee"
+#property link      "https://www.buymeacoffee.com/besibes"
 #property version   "1.22"
 #property strict
 sinput string g1="[---]";//Group 1 :
