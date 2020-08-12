@@ -1,12 +1,12 @@
 # corti
-Expert Advisor for MetaTrader 4 which trades correlated pairs .
+This is an Expert Advisor for MetaTrader 4 which is designed to trade correlated pairs .
 
-- selection of direction of correlated pairs to trade
-- one input field for global usd per pip value for pair
-- immediate calculation of lots before entry 
-- one input field for equity target 
-- close in profit
-- cooling time
+- Buy/Sell your preferred correlated pairs . 
+- Take profit in currency (not pips)
+- "Common Cost Per Point" automatically calculates lot before entering the trade .
+- Minutes to restart after closing in profit
+- Cycle=true;//Cycle With Profit ? - rotates order directions of the groups
+- Dont Trade Fridays (broker time) true/false
 
 Hard-coded are the settings i have been trading myself.
 It has no Stop Loss because the profit stays floating when you trade correlated pairs.
